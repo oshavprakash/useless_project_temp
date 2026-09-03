@@ -886,3 +886,57 @@ body {
     4px 4px 0 #b9b09f;
 
 }
+
+/* =========================
+   FINAL VIDEO
+========================= */
+
+.final-video {
+
+  width: 100%;
+
+  max-width: 100%;
+
+  display: block;
+
+  border: 4px solid #222;
+
+  box-shadow:
+    6px 6px 0 #b9b09f;
+
+  margin-top: 10px;
+
+}
+/* =========================
+   FINAL VIDEO MODE
+========================= */
+
+.desktop-layout.final-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hide side windows */
+.desktop-layout.final-mode .photo-window,
+.desktop-layout.final-mode .notes-window {
+  display: none;
+}
+
+/* Make main window much bigger */
+.desktop-layout.final-mode .quiz-window {
+  width: min(1200px, 90vw);
+}
+
+/* Give video more space */
+.desktop-layout.final-mode .quiz-content {
+  padding: 30px 40px 40px;
+}
+
+/* Large final video */
+.desktop-layout.final-mode .final-video {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  margin-top: 15px;
+}

@@ -38,8 +38,8 @@ const questions = [
   },
 
   {
-  question: "Your ideal lunch looks like...",
-  image: "images/question3.jpeg",
+  question: "Your ideal food looks like...",
+  image: "images/question10.jpeg",
 
   answers: [
     {
@@ -53,7 +53,7 @@ const questions = [
       points: 2
     },
     {
-      text: "Rice, sambar, thoran and pickle",
+      text: "Biriyani",
       image: "images/q43.jpeg",
       points: 5
     },
@@ -67,7 +67,7 @@ const questions = [
 
   {
     question: "Her Famous Quote",
-    image: "images/question3.jpeg",
+    image: "images/question9.jpeg",
     answers: [
       {
         text: "Don't Produce Too much",
@@ -86,26 +86,27 @@ const questions = [
 
    {
     question: "Dialogue From which movie",
-    image: "images/question5.jpeg",
+    audio: "audio/q2.mpeg",
+    image: "images/q11.jpeg",
  answers: [
     {
-      text: "Chitram",
+      text: "Vellanakalude naadu",
       image: "images/m1.jpeg",
       points: 10
     },
     {
-      text: "movie name",
+      text: "Ponmuttayidunna tharavu",
       image: "images/m2.jpeg",
       points: 2
     },
     {
-      text: "movie name",
-      image: "images/m3.jpeg",
+      text: "Meesha Madhavan",
+      image: "images/m33.jpeg",
       points: 5
     },
     {
-      text: "movie name",
-      image: "images/m4.jpeg",
+      text: "Manichithrathaazhu",
+      image: "images/m5.jpeg",
       points: 8
     }
   ]
@@ -135,53 +136,27 @@ const questions = [
   },
 
   {
-    question: "What does ?",
-    image: "images/question6.jpeg",
+    question: "What do you call this?",
+    image: "images/t1.jpeg",
     answers: [
       {
-        text: "Never",
-        points: 1
-      },
-      {
-        text: "Sometimes",
-        points: 4
-      },
-      {
-        text: "Pretty often",
-        points: 7
-      },
-      {
-        text: "My entire personality is dialogue references",
-        points: 10
-      }
-    ]
-  },
-
-  {
-    question: "What does Onam mean to you?",
-    image: "images/question7.jpeg",
-    answers: [
-      {
-        text: "Just another holiday",
+        text: "Kstrc",
         points: 2
       },
       {
-        text: "Nice food and decorations",
+        text: "Aana Vandi",
         points: 5
       },
       {
-        text: "Pookalam + Onasadya",
+        text: "Bus",
         points: 8
-      },
-      {
-        text: "Full Onam mode activated",
-        points: 10
       }
     ]
   },
 
  {
   question: "Listen carefully. Associate this song with right person?",
+  image: "images/question6.jpeg",
   audio: "audio/q1.mpeg",
   answers: [
     {
@@ -198,53 +173,7 @@ const questions = [
       points: 5
     }
   ]
-},
-
- {
-  question: "Listen carefully. What dialogue/song?sound is this?",
-  audio: "audio/startend.mpeg",
-  answers: [
-    {
-      text: "Option 1",
-      points: 2
-    },
-    {
-      text: "Option 2",
-      points: 4
-    },
-    {
-      text: "Option 3",
-      points: 8
-    },
-    {
-      text: "Option 4",
-      points: 10
-    }
-  ]
-},
-
-  {
-    question: "Someone says, \"I'm more Mallu than you.\" What do you do?",
-    image: "images/question6.jpeg",
-    answers: [
-      {
-        text: "Agree peacefully",
-        points: 2
-      },
-      {
-        text: "Laugh and move on",
-        points: 4
-      },
-      {
-        text: "Start defending yourself",
-        points: 7
-      },
-      {
-        text: "\"Enthada ithokke?\" Challenge accepted",
-        points: 10
-      }
-    ]
-  }
+}
 
 ];
 
@@ -565,99 +494,84 @@ function updateProgress() {
    SHOW RESULT
 ========================= */
 
+/* =========================
+   SHOW FINAL VIDEO
+========================= */
+
 function showResult() {
 
-  const maxScore =
-    questions.length * 10;
+  /* ADD FINAL MODE */
+
+  const desktopLayout =
+    document.querySelector(".desktop-layout");
 
 
-  const percentage =
-    Math.round(
-      (totalScore / maxScore) * 100
+  if (desktopLayout) {
+
+    desktopLayout.classList.add(
+      "final-mode"
     );
 
-
-  let level = "";
-
-  let message = "";
+  }
 
 
-  if (percentage <= 20) {
+  /* Stop and remove question audio */
 
-    level =
-      "MALLU LOADING... 🌱";
+  if (questionAudioContainer) {
 
-    message =
-      "A little more chaya and you're getting there!";
+    questionAudioContainer.innerHTML =
+      "";
 
   }
 
-  else if (percentage <= 40) {
 
-    level =
-      "MALLU BEGINNER 😄";
-
-    message =
-      "The Mallu energy is slowly activating!";
-
-  }
-
-  else if (percentage <= 60) {
-
-    level =
-      "CERTIFIED MALLU 🌴";
-
-    message =
-      "Okay okay... you definitely know the vibes!";
-
-  }
-
-  else if (percentage <= 80) {
-
-    level =
-      "FULL-ON MALLU ENERGY 🔥";
-
-    message =
-      "Chaya levels are dangerously high!";
-
-  }
-
-  else if (percentage <= 95) {
-
-    level =
-      "ULTIMATE MALLU 🥥";
-
-    message =
-      "You have achieved maximum Kerala vibes!";
-
-  }
-
-  else {
-
-    level =
-      "MALLU LEGEND 👑";
-
-    message =
-      "Naattil evideya? Because this score is legendary!";
-
-  }
-
+  /* Question number */
 
   questionNumber.textContent =
-    "RESULT";
+    "THE END";
 
 
-  questionText.innerHTML =
-    `HOW MALLU ARE YOU?<br><br>
-     ${percentage}%<br><br>
-     ${level}`;
+  /* Title */
 
+  questionText.textContent =
+    "WATCH THIS 👀";
+
+
+  /* Remove all answer options */
 
   answersContainer.innerHTML =
-    `<div class="result-message">
-      ${message}
-    </div>`;
+    "";
 
+
+  /* Create video */
+
+  const video =
+    document.createElement("video");
+
+
+  video.src =
+    "videos/final.mp4";
+
+
+  video.controls =
+    true;
+
+
+  video.autoplay =
+    true;
+
+
+  video.classList.add(
+    "final-video"
+  );
+
+
+  answersContainer.appendChild(
+    video
+  );
+
+
+  /* Change button */
 
   nextButton.textContent =
     "PLAY AGAIN ↻";
@@ -667,11 +581,15 @@ function showResult() {
     false;
 
 
+  /* Remove normal NEXT function */
+
   nextButton.removeEventListener(
     "click",
     handleNext
   );
 
+
+  /* Restart quiz */
 
   nextButton.addEventListener(
     "click",
@@ -680,21 +598,10 @@ function showResult() {
   );
 
 
+  /* Progress complete */
+
   progressFill.style.width =
     "100%";
-
-
-  /* Optional result image */
-
-  if (questionImage) {
-
-    questionImage.src =
-      "images/question7.jpeg";
-
-    questionImage.alt =
-      "Quiz complete";
-
-  }
 
 }
 
@@ -703,29 +610,112 @@ function showResult() {
    RESTART QUIZ
 ========================= */
 
-function restartQuiz() {
+function showResult() {
 
-  currentQuestion = 0;
+  /* ADD FINAL MODE */
 
-  totalScore = 0;
+  const desktopLayout =
+    document.querySelector(".desktop-layout");
 
-  selectedPoints = null;
 
+  if (desktopLayout) {
+
+    desktopLayout.classList.add(
+      "final-mode"
+    );
+
+  }
+
+
+  /* Stop and remove question audio */
+
+  if (questionAudioContainer) {
+
+    questionAudioContainer.innerHTML =
+      "";
+
+  }
+
+
+  /* Question number */
+
+  questionNumber.textContent =
+    "THE END";
+
+
+  /* Title */
+
+  questionText.textContent =
+    "WATCH THIS 👀";
+
+
+  /* Remove all answer options */
+
+  answersContainer.innerHTML =
+    "";
+
+
+  /* Create video */
+
+  const video =
+    document.createElement("video");
+
+
+  video.src =
+    "video/final.mp4";
+
+
+  video.controls =
+    true;
+
+
+  video.autoplay =
+    true;
+
+
+  video.classList.add(
+    "final-video"
+  );
+
+
+  answersContainer.appendChild(
+    video
+  );
+
+
+  /* Change button */
 
   nextButton.textContent =
-    "NEXT →";
+    "PLAY AGAIN ↻";
 
 
-  nextButton.addEventListener(
+  nextButton.disabled =
+    false;
+
+
+  /* Remove normal NEXT function */
+
+  nextButton.removeEventListener(
     "click",
     handleNext
   );
 
 
-  showQuestion();
+  /* Restart quiz */
+
+  nextButton.addEventListener(
+    "click",
+    restartQuiz,
+    { once: true }
+  );
+
+
+  /* Progress complete */
+
+  progressFill.style.width =
+    "100%";
 
 }
-
 
 /* =========================
    CLOCK
