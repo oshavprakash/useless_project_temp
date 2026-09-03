@@ -6,13 +6,12 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: USELESS DUO
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: V. RINOSHA PRAKASH- GOVT. MODEL ENGINEERING COLLEGE ERNAKULAM
+- Member 2: ANN SARA SUMAN - GOVT. MODEL ENGINEERING COLLEGE ERNAKULAM
 
 ### Project Description
 [2-3 lines about what your project does]
