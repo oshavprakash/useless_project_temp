@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Mallu Level Calculator</title>
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body class="calculator-page">
+
+```
+<!-- Background decorations -->
+<div class="background-elements">
+    <span class="pixel-icon icon-1">🌴</span>
+    <span class="pixel-icon icon-2">🥥</span>
+    <span class="pixel-icon icon-3">💾</span>
+    <span class="pixel-icon icon-4">✨</span>
+    <span class="pixel-icon icon-5">🧮</span>
+    <span class="pixel-icon icon-6">🌶️</span>
+</div>
+
+
+<main class="calculator-container">
+
+    <!-- Back to home -->
+    <a href="index.html" class="back-button">
+        ← HOME
+    </a>
+
+
+    <!-- Calculator heading -->
+    <div class="calculator-header">
+
+        <h1>HOW MALLU ARE YOU? 🧮</h1>
+
+        <p class="calculator-subtitle">
+            Let's see how much Mallu energy you actually have...
+        </p>
+
+    </div>
+
+
+    <!-- Progress section -->
+    <div class="progress-section">
+
+        <p id="question-counter">
+            Question 1 of 10
+        </p>
+
+        <div class="progress-bar">
+
+            <div class="progress-fill" id="progress-fill"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Question card -->
+    <section class="question-card">
+
+        <!-- Question will be added using JavaScript -->
+        <h2 id="question">
+            Loading your Mallu question...
+        </h2>
+
+
+        <!-- Answer options will be added using JavaScript -->
+        <div id="answer-options" class="answer-options">
+
+            <!-- JavaScript adds buttons here -->
+
+        </div>
+
+
+        <!-- Next button -->
+        <button id="next-button" class="next-button">
+            NEXT →
+        </button>
+
+    </section>
+
+
+    <!-- Result section -->
+    <section id="result-section" class="result-section">
+
+        <h2 id="result-title">
+            YOUR MALLU LEVEL
+        </h2>
+
+        <div id="result-score" class="result-score">
+            0%
+        </div>
+
+        <p id="result-message">
+            Your result will appear here!
+        </p>
+
+
+        <!-- Try again button -->
+        <button id="restart-button" class="restart-button">
+            TRY AGAIN 🔄
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- Calculator JavaScript -->
+<script src="calculator.js"></script>
+```
+
+</body>
+</html>
