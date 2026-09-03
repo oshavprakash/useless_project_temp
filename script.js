@@ -1,4 +1,70 @@
 /* =========================================
+   BACKGROUND MUSIC
+========================================= */
+
+const backgroundMusic =
+    document.getElementById("backgroundMusic");
+
+backgroundMusic.volume = 0.4;
+
+
+/* Start music on FIRST interaction anywhere */
+
+function startBackgroundMusic() {
+
+    backgroundMusic.play()
+        .then(function () {
+
+            console.log("Background music started");
+
+        })
+        .catch(function (error) {
+
+            console.log(
+                "Music could not start:",
+                error
+            );
+
+        });
+
+
+    /* Remove listeners after music starts */
+
+    document.removeEventListener(
+        "click",
+        startBackgroundMusic
+    );
+
+    document.removeEventListener(
+        "touchstart",
+        startBackgroundMusic
+    );
+
+    document.removeEventListener(
+        "keydown",
+        startBackgroundMusic
+    );
+
+}
+
+
+/* Listen for first user interaction */
+
+document.addEventListener(
+    "click",
+    startBackgroundMusic
+);
+
+document.addEventListener(
+    "touchstart",
+    startBackgroundMusic
+);
+
+document.addEventListener(
+    "keydown",
+    startBackgroundMusic
+);
+/* =========================================
    CLOCK
 ========================================= */
 
