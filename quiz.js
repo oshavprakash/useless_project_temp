@@ -1,3 +1,5 @@
+const questionAudioContainer =
+  document.getElementById("question-audio-container");
 /* =========================
    GET PHOTO ELEMENT
 ========================= */
@@ -13,122 +15,127 @@ const questionImage =
 const questions = [
 
   {
-    question: "It's 4 PM. What's happening at home?",
+    question: "When you meet another Malayali outside Kerala, what's the first thing you want to know?",
     image: "images/question1.jpeg",
     answers: [
       {
-        text: "Nothing, just chilling",
+        text: "Nothing, just say namaskaram",
         points: 2
       },
       {
-        text: "Coffee, maybe a biscuit",
-        points: 4
-      },
-      {
-        text: "Chaya + something fried, non-negotiable",
+        text: "Sadhanam kayil indo?",
         points: 8
       },
       {
-        text: "Chaya, parippu vada, and a full family debate",
+        text: "aliyaaaa......(malayali sixth sense)",
+        points: 4
+      },
+      {
+        text: "\"Naattil evideya?(rest is history)\" immediately",
         points: 10
       }
     ]
   },
 
   {
-    question: "When you meet another Malayali outside Kerala, what's the first thing you want to know?",
-    image: "images/question2.jpeg",
-    answers: [
-      {
-        text: "Nothing, just say hello",
-        points: 2
-      },
-      {
-        text: "Their name",
-        points: 4
-      },
-      {
-        text: "Which part of Kerala they're from",
-        points: 8
-      },
-      {
-        text: "\"Naattil evideya?\" immediately",
-        points: 10
-      }
-    ]
-  },
+  question: "Your ideal lunch looks like...",
+  image: "images/question3.jpeg",
+
+  answers: [
+    {
+      text: "Porotta and Beef",
+      image: "images/q41.jpeg",
+      points: 10
+    },
+    {
+      text: "Burger And Sandwich",
+      image: "images/q42.jpeg",
+      points: 2
+    },
+    {
+      text: "Rice, sambar, thoran and pickle",
+      image: "images/q43.jpeg",
+      points: 5
+    },
+    {
+      text: "Full sadya energy",
+      image: "images/question4.jpeg",
+      points: 8
+    }
+  ]
+},
 
   {
-    question: "Your ideal lunch looks like...",
+    question: "Her Famous Quote",
     image: "images/question3.jpeg",
     answers: [
       {
-        text: "Sandwich or burger",
-        points: 2
+        text: "Don't Produce Too much",
+        points: 10
       },
       {
-        text: "Rice and curry",
+        text: "Don't talk too much",
         points: 5
       },
       {
-        text: "Rice, sambar, thoran and pickle",
-        points: 8
-      },
-      {
-        text: "Full sadya energy",
-        points: 10
-      }
-    ]
-  },
-
-  {
-    question: "It's raining heavily outside. Your reaction?",
-    image: "images/question4.jpeg",
-    answers: [
-      {
-        text: "Stay inside",
+        text: "Don't expect too much",
         points: 2
-      },
-      {
-        text: "Enjoy looking at the rain",
-        points: 4
-      },
-      {
-        text: "Immediately want chaya and snacks",
-        points: 8
-      },
-      {
-        text: "Chaya + pazhampori + standing outside watching the rain",
-        points: 10
       }
     ]
   },
 
+   {
+    question: "Dialogue From which movie",
+    image: "images/question5.jpeg",
+ answers: [
+    {
+      text: "Chitram",
+      image: "images/m1.jpeg",
+      points: 10
+    },
+    {
+      text: "movie name",
+      image: "images/m2.jpeg",
+      points: 2
+    },
+    {
+      text: "movie name",
+      image: "images/m3.jpeg",
+      points: 5
+    },
+    {
+      text: "movie name",
+      image: "images/m4.jpeg",
+      points: 8
+    }
+  ]
+  },
+
   {
-    question: "You arrive at a family function. What happens first?",
+    question: "What is the first thing you teach your non mallu friend",
     image: "images/question5.jpeg",
     answers: [
       {
-        text: "Find a quiet corner",
-        points: 2
+        text: "Poda Patti!!",
+        points: 10
       },
       {
-        text: "Say hi to everyone",
+        text: "peru entha?",
         points: 4
       },
       {
-        text: "Someone asks what you're studying or doing",
+        text: "Sugam aano?",
         points: 8
       },
       {
-        text: "Within 5 minutes: career, marriage and life plans",
+        text: "Kazhicho?",
         points: 10
       }
     ]
   },
 
   {
-    question: "How often do you randomly use Malayalam movie dialogues?",
+    question: "What does ?",
     image: "images/question6.jpeg",
     answers: [
       {
@@ -173,51 +180,48 @@ const questions = [
     ]
   },
 
-  {
-    question: "You're travelling and suddenly hear someone speaking Malayalam nearby.",
-    image: "images/question2.jpeg",
-    answers: [
-      {
-        text: "Ignore it",
-        points: 1
-      },
-      {
-        text: "Notice it but say nothing",
-        points: 4
-      },
-      {
-        text: "Try to figure out where they're from",
-        points: 8
-      },
-      {
-        text: "Mentally prepare to ask: Naattil evideya?",
-        points: 10
-      }
-    ]
-  },
+ {
+  question: "Listen carefully. Associate this song with right person?",
+  audio: "audio/q1.mpeg",
+  answers: [
+    {
+      image: "images/p1.jpeg",
+      points: 8
+    },
+    {
+      image: "images/p2.jpeg",
+      points: 10
+    },
+    {
 
-  {
-    question: "Which combination feels the most like home?",
-    image: "images/question1.jpeg",
-    answers: [
-      {
-        text: "Wi-Fi + headphones",
-        points: 2
-      },
-      {
-        text: "Coffee + snacks",
-        points: 4
-      },
-      {
-        text: "Chaya + banana chips",
-        points: 8
-      },
-      {
-        text: "Chaya + banana chips + coconut oil somewhere nearby",
-        points: 10
-      }
-    ]
-  },
+      image: "images/p3.jpeg",
+      points: 5
+    }
+  ]
+},
+
+ {
+  question: "Listen carefully. What dialogue/song?sound is this?",
+  audio: "audio/startend.mpeg",
+  answers: [
+    {
+      text: "Option 1",
+      points: 2
+    },
+    {
+      text: "Option 2",
+      points: 4
+    },
+    {
+      text: "Option 3",
+      points: 8
+    },
+    {
+      text: "Option 4",
+      points: 10
+    }
+  ]
+},
 
   {
     question: "Someone says, \"I'm more Mallu than you.\" What do you do?",
@@ -347,6 +351,32 @@ function showQuestion() {
 
   questionText.textContent =
     current.question;
+/* =========================
+   QUESTION AUDIO
+========================= */
+
+questionAudioContainer.innerHTML = "";
+
+if (current.audio) {
+
+  const audio =
+    document.createElement("audio");
+
+  audio.src =
+    current.audio;
+
+  audio.controls =
+    true;
+
+  audio.classList.add(
+    "question-audio"
+  );
+
+  questionAudioContainer.appendChild(
+    audio
+  );
+
+}
 
 
   /* CLEAR OLD ANSWERS */
@@ -374,8 +404,42 @@ function showQuestion() {
     );
 
 
-    button.textContent =
-      answer.text;
+    if (answer.image) {
+
+  const optionImage =
+    document.createElement("img");
+
+  optionImage.src =
+    answer.image;
+
+  optionImage.alt =
+    answer.text;
+
+  optionImage.classList.add(
+    "answer-image"
+  );
+
+  const optionText =
+    document.createElement("span");
+
+  optionText.textContent =
+    answer.text;
+
+  optionText.classList.add(
+    "answer-text"
+  );
+
+  button.appendChild(optionImage);
+  button.appendChild(optionText);
+
+  button.classList.add("image-answer");
+
+} else {
+
+  button.textContent =
+    answer.text;
+
+}
 
 
     button.addEventListener(
