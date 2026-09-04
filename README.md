@@ -45,8 +45,7 @@ For Software:
 
 # Screenshots (Add at least 3)
 
-![Screenshot1]
-(ss/1.jpeg)
+![Screenshot1](ss/1.jpeg)
 *Initial design of home page*
 
 ![Screenshot2](ss/2.jpeg)
