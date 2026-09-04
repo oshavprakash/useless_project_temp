@@ -44,14 +44,17 @@ Alternatively, use VS Code Live Server to launch the project locally.
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1]
+(ss/1.jpeg)
+*Initial design of home page*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](ss/2.jpeg)
+*Questionaire layout*
+
+
+![Screenshot3](ss/3.jpeg)
+*Final design of home page*
 
 # Diagrams
               ┌─────────────────┐
